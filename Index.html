@@ -1,0 +1,490 @@
+<p>&lt;!DOCTYPE html&gt;</p>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>
+Castille Installation Services — Baton Rouge
+</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/><br />
+
+<style>  
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }  
+    :root { --navy: #0f1f38; --gold: #c9a84c; --gold-light: #e2c47a; --cream: #f8f5f0; --white: #ffffff; --gray: #6b7280; --border: #e0dbd2; }  
+    html { scroll-behavior: smooth; }  
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--navy); line-height: 1.6; }  
+  
+```  
+/* NAV */  
+nav { position: fixed; top: 0; width: 100%; z-index: 100; background: rgba(15,31,56,0.97); backdrop-filter: blur(8px); padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 70px; border-bottom: 1px solid rgba(201,168,76,0.2); }  
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }  
+.nav-logo-icon { width: 36px; height: 36px; background: var(--gold); border-radius: 6px; display: flex; align-items: center; justify-content: center; }  
+.nav-logo-icon svg { width: 20px; height: 20px; fill: var(--navy); }  
+.nav-brand { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--white); letter-spacing: 0.02em; }  
+.nav-links { display: flex; gap: 2rem; list-style: none; }  
+.nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.875rem; letter-spacing: 0.04em; transition: color 0.2s; }  
+.nav-links a:hover { color: var(--gold); }  
+.nav-cta { background: var(--gold) !important; color: var(--navy) !important; padding: 0.5rem 1.25rem !important; border-radius: 4px; font-weight: 500 !important; }  
+.nav-cta:hover { background: var(--gold-light) !important; }  
+  
+/* HERO */  
+.hero { min-height: 100vh; background: var(--navy); display: flex; align-items: center; padding: 70px 5% 0; position: relative; overflow: hidden; }  
+.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.07) 0%, transparent 65%); }  
+.hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px); background-size: 60px 60px; }  
+.hero-content { position: relative; z-index: 1; max-width: 680px; }  
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.3); color: var(--gold); padding: 0.35rem 0.9rem; border-radius: 20px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 0.6s 0.1s forwards; }  
+.hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }  
+.hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 5vw, 3.8rem); color: var(--white); line-height: 1.15; margin-bottom: 1.25rem; opacity: 0; animation: fadeUp 0.6s 0.25s forwards; }  
+.hero h1 span { color: var(--gold); }  
+.hero p { font-size: 1.05rem; color: rgba(255,255,255,0.65); max-width: 540px; margin-bottom: 2.5rem; font-weight: 300; opacity: 0; animation: fadeUp 0.6s 0.4s forwards; }  
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.6s 0.55s forwards; }  
+.btn-primary { background: var(--gold); color: var(--navy); padding: 0.875rem 2rem; border-radius: 5px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: background 0.2s, transform 0.2s; display: inline-flex; align-items: center; gap: 8px; }  
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }  
+.btn-secondary { background: transparent; color: rgba(255,255,255,0.8); padding: 0.875rem 2rem; border-radius: 5px; text-decoration: none; font-size: 0.95rem; border: 1px solid rgba(255,255,255,0.2); transition: border-color 0.2s, color 0.2s; }  
+.btn-secondary:hover { border-color: var(--gold); color: var(--gold); }  
+.hero-stats { position: absolute; right: 5%; bottom: 10%; display: flex; flex-direction: column; gap: 1.5rem; opacity: 0; animation: fadeLeft 0.7s 0.7s forwards; }  
+.stat { text-align: right; }  
+.stat-num { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--gold); line-height: 1; }  
+.stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.08em; }  
+  
+/* TRUST BAR */  
+.trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 5%; display: flex; align-items: center; justify-content: center; gap: 2.5rem; flex-wrap: wrap; }  
+.trust-item { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--gray); }  
+.trust-item svg { width: 15px; height: 15px; stroke: var(--gold); fill: none; stroke-width: 2.5; }  
+  
+/* SECTIONS */  
+section { padding: 5rem 5%; }  
+.section-label { display: inline-flex; align-items: center; gap: 8px; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }  
+.section-label::before { content: ''; width: 24px; height: 2px; background: var(--gold); }  
+.section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); color: var(--navy); line-height: 1.2; margin-bottom: 1rem; }  
+.section-sub { font-size: 1rem; color: var(--gray); max-width: 540px; font-weight: 300; }  
+  
+/* HOW IT WORKS */  
+#how { background: var(--white); }  
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3rem; }  
+.step { text-align: center; padding: 1.5rem; }  
+.step-num { width: 48px; height: 48px; background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--gold); }  
+.step h3 { font-size: 0.95rem; font-weight: 500; color: var(--navy); margin-bottom: 0.4rem; }  
+.step p { font-size: 0.83rem; color: var(--gray); font-weight: 300; line-height: 1.6; }  
+  
+/* PRICING */  
+#pricing { background: var(--cream); }  
+.pricing-note { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.25); color: var(--navy); padding: 0.6rem 1rem; border-radius: 5px; font-size: 0.82rem; margin-top: 1rem; margin-bottom: 3rem; max-width: 600px; line-height: 1.5; }  
+.pricing-note svg { width: 15px; height: 15px; stroke: var(--gold); fill: none; stroke-width: 2; flex-shrink: 0; }  
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }  
+.pricing-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 2rem; display: flex; flex-direction: column; position: relative; transition: box-shadow 0.25s, transform 0.25s; }  
+.pricing-card:hover { box-shadow: 0 10px 36px rgba(15,31,56,0.1); transform: translateY(-4px); }  
+.pricing-card.featured { border-color: var(--gold); border-width: 2px; }  
+.featured-badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--navy); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.25rem 0.9rem; border-radius: 20px; white-space: nowrap; }  
+.card-tier { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }  
+.card-name { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 0.25rem; }  
+.card-price { font-family: 'Playfair Display', serif; font-size: 2.4rem; color: var(--navy); line-height: 1; margin-bottom: 0.25rem; }  
+.card-price sup { font-size: 1rem; vertical-align: top; margin-top: 0.4rem; display: inline-block; }  
+.card-time { font-size: 0.78rem; color: var(--gray); margin-bottom: 1.5rem; }  
+.card-divider { height: 1px; background: var(--border); margin-bottom: 1.25rem; }  
+.card-includes { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray); margin-bottom: 0.75rem; }  
+.card-features { list-style: none; flex: 1; }  
+.card-features li { display: flex; align-items: flex-start; gap: 9px; font-size: 0.875rem; color: var(--navy); margin-bottom: 0.6rem; font-weight: 300; }  
+.card-features li svg { width: 14px; height: 14px; stroke: var(--gold); fill: none; stroke-width: 2.5; flex-shrink: 0; margin-top: 3px; }  
+.card-note { font-size: 0.78rem; color: var(--gray); margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border); font-style: italic; }  
+.card-btn { display: block; text-align: center; margin-top: 1.5rem; padding: 0.75rem; border-radius: 5px; font-size: 0.88rem; font-weight: 500; text-decoration: none; transition: background 0.2s, color 0.2s; }  
+.pricing-card:not(.featured) .card-btn { border: 1px solid var(--border); color: var(--navy); }  
+.pricing-card:not(.featured) .card-btn:hover { border-color: var(--gold); color: var(--gold); }  
+.pricing-card.featured .card-btn { background: var(--gold); color: var(--navy); }  
+.pricing-card.featured .card-btn:hover { background: var(--gold-light); }  
+.pricing-footer { margin-top: 2rem; text-align: center; font-size: 0.83rem; color: var(--gray); }  
+.pricing-footer a { color: var(--gold); text-decoration: none; font-weight: 500; }  
+.pricing-footer a:hover { text-decoration: underline; }  
+  
+/* SERVICES */  
+#services { background: var(--white); }  
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.25rem; margin-top: 2.5rem; }  
+.service-card { background: var(--cream); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; transition: border-color 0.2s, box-shadow 0.2s; }  
+.service-card:hover { border-color: var(--gold); box-shadow: 0 4px 20px rgba(15,31,56,0.06); }  
+.service-icon { width: 42px; height: 42px; background: rgba(201,168,76,0.1); border-radius: 7px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }  
+.service-icon svg { width: 22px; height: 22px; stroke: var(--gold); fill: none; stroke-width: 1.8; }  
+.service-card h3 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--navy); margin-bottom: 0.4rem; }  
+.service-card p { font-size: 0.83rem; color: var(--gray); font-weight: 300; line-height: 1.6; }  
+  
+/* WHY */  
+#why { background: var(--navy); }  
+#why .section-title { color: var(--white); }  
+#why .section-sub { color: rgba(255,255,255,0.5); }  
+.why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 3rem; }  
+.why-item { padding: 1.5rem; border: 1px solid rgba(201,168,76,0.15); border-radius: 8px; background: rgba(255,255,255,0.03); transition: background 0.2s, border-color 0.2s; }  
+.why-item:hover { background: rgba(201,168,76,0.05); border-color: rgba(201,168,76,0.35); }  
+.why-num { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--gold); opacity: 0.35; line-height: 1; margin-bottom: 0.5rem; }  
+.why-item h3 { font-size: 0.92rem; font-weight: 500; color: var(--white); margin-bottom: 0.35rem; }  
+.why-item p { font-size: 0.81rem; color: rgba(255,255,255,0.45); font-weight: 300; line-height: 1.6; }  
+  
+/* CONTACT */  
+#contact { background: var(--cream); }  
+.contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; align-items: start; }  
+.contact-info h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--navy); margin-bottom: 1rem; }  
+.contact-info p { color: var(--gray); font-size: 0.9rem; font-weight: 300; line-height: 1.7; margin-bottom: 2rem; }  
+.contact-detail { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 1rem; }  
+.contact-detail-icon { width: 36px; height: 36px; flex-shrink: 0; background: rgba(201,168,76,0.1); border-radius: 6px; display: flex; align-items: center; justify-content: center; }  
+.contact-detail-icon svg { width: 16px; height: 16px; stroke: var(--gold); fill: none; stroke-width: 2; }  
+.contact-detail-text strong { display: block; font-size: 0.75rem; font-weight: 600; color: var(--navy); letter-spacing: 0.05em; text-transform: uppercase; }  
+.contact-detail-text span { font-size: 0.9rem; color: var(--gray); }  
+.contact-form { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 2.5rem; }  
+.contact-form h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 1.5rem; }  
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }  
+.form-group { margin-bottom: 1.1rem; }  
+.form-group label { display: block; font-size: 0.75rem; font-weight: 600; color: var(--navy); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.4rem; }  
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.7rem 0.9rem; border: 1px solid var(--border); border-radius: 5px; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--navy); background: var(--cream); transition: border-color 0.2s, box-shadow 0.2s; outline: none; }  
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,168,76,0.1); }  
+.form-group textarea { resize: vertical; min-height: 90px; }  
+.form-submit { width: 100%; background: var(--navy); color: var(--white); padding: 0.9rem; border: none; border-radius: 5px; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 500; cursor: pointer; letter-spacing: 0.04em; transition: background 0.2s; margin-top: 0.5rem; }  
+.form-submit:hover { background: #1a2f50; }  
+.form-success { display: none; text-align: center; padding: 2rem; }  
+.form-success .check { width: 56px; height: 56px; background: rgba(201,168,76,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; }  
+.form-success .check svg { width: 28px; height: 28px; stroke: var(--gold); fill: none; stroke-width: 2; }  
+.form-success h4 { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--navy); margin-bottom: 0.5rem; }  
+.form-success p { font-size: 0.88rem; color: var(--gray); }  
+  
+/* FOOTER */  
+footer { background: var(--navy); color: rgba(255,255,255,0.45); text-align: center; padding: 2rem 5%; font-size: 0.8rem; border-top: 1px solid rgba(201,168,76,0.15); }  
+footer span { color: var(--gold); }  
+  
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }  
+@keyframes fadeLeft { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }  
+  
+@media (max-width: 900px) { .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; } }  
+@media (max-width: 768px) { .nav-links { display: none; } .hero-stats { display: none; } .contact-wrap { grid-template-columns: 1fr; gap: 2rem; } .form-row { grid-template-columns: 1fr; } .trust-bar { gap: 1rem; } }  
+```  
+  
+  </style>
+</head>
+<body>
+<nav>
+<a href="#" class="nav-logo"><br />
+
+<div class="nav-logo-icon">
+<svg viewBox="0 0 24 24">
+<path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+</svg>
+</div>
+<span class="nav-brand">Castille</span><br />
+</a><br />
+
+<ul class="nav-links">
+<li>
+<a href="#pricing">Pricing</a>
+</li>
+<li>
+<a href="#services">Services</a>
+</li>
+<li>
+<a href="#why">Why Us</a>
+</li>
+<li>
+<a href="#contact" class="nav-cta">Get a Quote</a>
+</li>
+</ul>
+</nav>
+<section class="hero">
+<div class="hero-grid">
+
+</div>
+<div class="hero-content">
+<pre><code>&lt;div class=&quot;hero-badge&quot;&gt;Baton Rouge &amp;amp; Surrounding Areas&lt;/div&gt;  
+&lt;h1&gt;Swap Out Old.&lt;br/&gt;&lt;span&gt;Bring In New.&lt;/span&gt;&lt;br/&gt;One Flat Price.&lt;/h1&gt;  
+&lt;p&gt;Castille Installation Services replaces your old electrical fixtures and devices with the new ones you already have — at a clear, upfront flat rate. No hourly guessing.&lt;/p&gt;  
+&lt;div class=&quot;hero-actions&quot;&gt;  
+  &lt;a href=&quot;#pricing&quot; class=&quot;btn-primary&quot;&gt;  
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2.5&quot;&gt;&lt;line x1=&quot;12&quot; y1=&quot;1&quot; x2=&quot;12&quot; y2=&quot;23&quot;/&gt;&lt;path d=&quot;M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6&quot;/&gt;&lt;/svg&gt;  
+    See Flat-Rate Pricing  
+  &lt;/a&gt;  
+  &lt;a href=&quot;#contact&quot; class=&quot;btn-secondary&quot;&gt;Request a Custom Quote&lt;/a&gt;  
+&lt;/div&gt;  </code></pre>
+</div>
+<div class="hero-stats">
+<pre><code>&lt;div class=&quot;stat&quot;&gt;&lt;div class=&quot;stat-num&quot;&gt;100%&lt;/div&gt;&lt;div class=&quot;stat-label&quot;&gt;Upfront Pricing&lt;/div&gt;&lt;/div&gt;  
+&lt;div class=&quot;stat&quot;&gt;&lt;div class=&quot;stat-num&quot;&gt;Fast&lt;/div&gt;&lt;div class=&quot;stat-label&quot;&gt;Same-Week Scheduling&lt;/div&gt;&lt;/div&gt;  
+&lt;div class=&quot;stat&quot;&gt;&lt;div class=&quot;stat-num&quot;&gt;5★&lt;/div&gt;&lt;div class=&quot;stat-label&quot;&gt;Customer Satisfaction&lt;/div&gt;&lt;/div&gt;  </code></pre>
+</div>
+</section>
+<div class="trust-bar">
+<div class="trust-item">
+<svg viewBox="0 0 24 24">
+<polyline points="20 6 9 17 4 12"/>
+</svg>
+You supply the fixture — we do the swap
+</div>
+<div class="trust-item">
+<svg viewBox="0 0 24 24">
+<polyline points="20 6 9 17 4 12"/>
+</svg>
+Price is fixed before we arrive
+</div>
+<div class="trust-item">
+<svg viewBox="0 0 24 24">
+<polyline points="20 6 9 17 4 12"/>
+</svg>
+Replacements in existing locations only
+</div>
+<div class="trust-item">
+<svg viewBox="0 0 24 24">
+<polyline points="20 6 9 17 4 12"/>
+</svg>
+Residential &amp; Commercial
+</div>
+</div>
+<section id="how">
+<div class="section-label">
+Simple Process
+</div>
+<h2 class="section-title">
+How It Works
+</h2>
+<p class="section-sub">
+Getting your fixtures upgraded shouldn’t be complicated. Here’s our
+straightforward process.
+</p>
+<div class="steps">
+<pre><code>&lt;div class=&quot;step&quot;&gt;  
+  &lt;div class=&quot;step-num&quot;&gt;1&lt;/div&gt;  
+  &lt;h3&gt;Pick Your Package&lt;/h3&gt;  
+  &lt;p&gt;Choose the flat-rate package that matches how much work you need done. No hourly rate, no surprises.&lt;/p&gt;  
+&lt;/div&gt;  
+&lt;div class=&quot;step&quot;&gt;  
+  &lt;div class=&quot;step-num&quot;&gt;2&lt;/div&gt;  
+  &lt;h3&gt;You Supply the Fixtures&lt;/h3&gt;  
+  &lt;p&gt;Buy your new light fixtures, fans, outlets, or switches from any retailer — we&#39;ll handle the installation.&lt;/p&gt;  
+&lt;/div&gt;  
+&lt;div class=&quot;step&quot;&gt;  
+  &lt;div class=&quot;step-num&quot;&gt;3&lt;/div&gt;  
+  &lt;h3&gt;We Swap &amp;amp; Install&lt;/h3&gt;  
+  &lt;p&gt;We remove the old device and install the new one in the same existing location. Clean, professional, done.&lt;/p&gt;  
+&lt;/div&gt;  
+&lt;div class=&quot;step&quot;&gt;  
+  &lt;div class=&quot;step-num&quot;&gt;4&lt;/div&gt;  
+  &lt;h3&gt;Enjoy the Upgrade&lt;/h3&gt;  
+  &lt;p&gt;We leave your space tidy and your new fixtures looking exactly how you imagined.&lt;/p&gt;  
+&lt;/div&gt;  </code></pre>
+</div>
+</section>
+<section id="pricing">
+<div class="section-label">
+Flat-Rate Packages
+</div>
+<h2 class="section-title">
+Simple, Transparent Pricing
+</h2>
+<p class="section-sub">
+Pick the package that fits your project. Every price is fixed — you know
+the cost before we ever arrive.
+</p>
+<div class="pricing-note">
+<pre><code>&lt;svg viewBox=&quot;0 0 24 24&quot;&gt;&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;10&quot;/&gt;&lt;line x1=&quot;12&quot; y1=&quot;8&quot; x2=&quot;12&quot; y2=&quot;12&quot;/&gt;&lt;line x1=&quot;12&quot; y1=&quot;16&quot; x2=&quot;12.01&quot; y2=&quot;16&quot;/&gt;&lt;/svg&gt;  
+Customer supplies all materials. We replace existing fixtures and devices in preexisting locations only — no new wiring or panel box work included.  </code></pre>
+</div>
+<div class="pricing-grid">
+<pre><code>&lt;div class=&quot;pricing-card&quot;&gt;  
+  &lt;div class=&quot;card-tier&quot;&gt;Good&lt;/div&gt;  
+  &lt;div class=&quot;card-name&quot;&gt;Basic Fix&lt;/div&gt;  
+  &lt;div class=&quot;card-price&quot;&gt;&lt;sup&gt;$&lt;/sup&gt;179&lt;/div&gt;  
+  &lt;div class=&quot;card-time&quot;&gt;Typical time: 1–1.5 hours&lt;/div&gt;  
+  &lt;div class=&quot;card-divider&quot;&gt;&lt;/div&gt;  
+  &lt;div class=&quot;card-includes&quot;&gt;Includes one task:&lt;/div&gt;  
+  &lt;ul class=&quot;card-features&quot;&gt;  
+    &lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot;&gt;&lt;polyline points=&quot;20 6 9 17 4 12&quot;/&gt;&lt;/svg&gt; Replace 1 light fixture or ceiling fan &amp;amp; switch&lt;/li&gt;  
+    &lt;li style=&quot;padding-left:1.5rem; font-style:italic; font-size:0.8rem; color:var(--gray);&quot;&gt;— or —&lt;/li&gt;  
+    &lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot;&gt;&lt;polyline points=&quot;20 6 9 17 4 12&quot;/&gt;&lt;/svg&gt; Replace up to 3 outlets or switches&lt;/li&gt;  
+  &lt;/ul&gt;  
+  &lt;p class=&quot;card-note&quot;&gt;Great for a single quick upgrade or swap.&lt;/p&gt;  
+  &lt;a href=&quot;#contact&quot; class=&quot;card-btn&quot;&gt;Book This Package&lt;/a&gt;  
+&lt;/div&gt;  </code></pre>
+<pre><code>&lt;div class=&quot;pricing-card featured&quot;&gt;  
+  &lt;div class=&quot;featured-badge&quot;&gt;Most Popular&lt;/div&gt;  
+  &lt;div class=&quot;card-tier&quot;&gt;Better&lt;/div&gt;  
+  &lt;div class=&quot;card-name&quot;&gt;Lighting Refresh&lt;/div&gt;  
+  &lt;div class=&quot;card-price&quot;&gt;&lt;sup&gt;$&lt;/sup&gt;379&lt;/div&gt;  
+  &lt;div class=&quot;card-time&quot;&gt;Typical time: 2–3 hours&lt;/div&gt;  
+  &lt;div class=&quot;card-divider&quot;&gt;&lt;/div&gt;  
+  &lt;div class=&quot;card-includes&quot;&gt;All of the following included:&lt;/div&gt;  
+  &lt;ul class=&quot;card-features&quot;&gt;  
+    &lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot;&gt;&lt;polyline points=&quot;20 6 9 17 4 12&quot;/&gt;&lt;/svg&gt; Replace up to 2 fixtures or fans&lt;/li&gt;  
+    &lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot;&gt;&lt;polyline points=&quot;20 6 9 17 4 12&quot;/&gt;&lt;/svg&gt; Replace up to 4 outlets or switches&lt;/li&gt;  
+    &lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot;&gt;&lt;polyline points=&quot;20 6 9 17 4 12&quot;/&gt;&lt;/svg&gt; Electrical safety check included&lt;/li&gt;  
+  &lt;/ul&gt;  
+  &lt;p class=&quot;card-note&quot;&gt;The most popular choice — feels like a real home upgrade.&lt;/p&gt;  
+  &lt;a href=&quot;#contact&quot; class=&quot;card-btn&quot;&gt;Book This Package&lt;/a&gt;  
+&lt;/div&gt;  
+  
+&lt;div class=&quot;pricing-card&quot;&gt;  
+  &lt;div class=&quot;card-tier&quot;&gt;Best&lt;/div&gt;  
+  &lt;div class=&quot;card-name&quot;&gt;Whole Home Upgrade&lt;/div&gt;  
+  &lt;div class=&quot;card-price&quot;&gt;&lt;sup&gt;$&lt;/sup&gt;649&lt;/div&gt;  
+  &lt;div class=&quot;card-time&quot;&gt;Typical time: 4–6 hours&lt;/div&gt;  
+  &lt;div class=&quot;card-divider&quot;&gt;&lt;/div&gt;  
+  &lt;div class=&quot;card-includes&quot;&gt;All of the following included:&lt;/div&gt;  
+  &lt;ul class=&quot;card-features&quot;&gt;  
+    &lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot;&gt;&lt;polyline points=&quot;20 6 9 17 4 12&quot;/&gt;&lt;/svg&gt; Replace up to 4 fixtures or fans&lt;/li&gt;  
+    &lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot;&gt;&lt;polyline points=&quot;20 6 9 17 4 12&quot;/&gt;&lt;/svg&gt; Replace up to 8 outlets or switches&lt;/li&gt;  
+    &lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot;&gt;&lt;polyline points=&quot;20 6 9 17 4 12&quot;/&gt;&lt;/svg&gt; Bathroom fan replacement option&lt;/li&gt;  
+    &lt;li&gt;&lt;svg viewBox=&quot;0 0 24 24&quot;&gt;&lt;polyline points=&quot;20 6 9 17 4 12&quot;/&gt;&lt;/svg&gt; Full electrical safety check&lt;/li&gt;  
+  &lt;/ul&gt;  
+  &lt;p class=&quot;card-note&quot;&gt;Ideal for a full planned home refresh or renovation.&lt;/p&gt;  
+  &lt;a href=&quot;#contact&quot; class=&quot;card-btn&quot;&gt;Book This Package&lt;/a&gt;  
+&lt;/div&gt;  </code></pre>
+</div>
+<p class="pricing-footer">
+Need something outside these packages? <a href="#contact">Request a
+custom quote →</a>
+</p>
+</section>
+<section id="services">
+<div class="section-label">
+What We Replace
+</div>
+<h2 class="section-title">
+Fixtures &amp; Devices We Install
+</h2>
+<p class="section-sub">
+We specialize in replacing existing fixtures and devices in their
+current location — no new wiring, no box work, no guesswork.
+</p>
+<div class="services-grid">
+<pre><code>&lt;div class=&quot;service-card&quot;&gt;  
+  &lt;div class=&quot;service-icon&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot;&gt;&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;5&quot;/&gt;&lt;line x1=&quot;12&quot; y1=&quot;1&quot; x2=&quot;12&quot; y2=&quot;3&quot;/&gt;&lt;line x1=&quot;12&quot; y1=&quot;21&quot; x2=&quot;12&quot; y2=&quot;23&quot;/&gt;&lt;line x1=&quot;4.22&quot; y1=&quot;4.22&quot; x2=&quot;5.64&quot; y2=&quot;5.64&quot;/&gt;&lt;line x1=&quot;18.36&quot; y1=&quot;18.36&quot; x2=&quot;19.78&quot; y2=&quot;19.78&quot;/&gt;&lt;line x1=&quot;1&quot; y1=&quot;12&quot; x2=&quot;3&quot; y2=&quot;12&quot;/&gt;&lt;line x1=&quot;21&quot; y1=&quot;12&quot; x2=&quot;23&quot; y2=&quot;12&quot;/&gt;&lt;line x1=&quot;4.22&quot; y1=&quot;19.78&quot; x2=&quot;5.64&quot; y2=&quot;18.36&quot;/&gt;&lt;line x1=&quot;18.36&quot; y1=&quot;5.64&quot; x2=&quot;19.78&quot; y2=&quot;4.22&quot;/&gt;&lt;/svg&gt;&lt;/div&gt;  
+  &lt;h3&gt;Light Fixtures&lt;/h3&gt;  
+  &lt;p&gt;Ceiling lights, wall fixtures, pendant lights, and vanity lights replaced cleanly in existing mounting locations.&lt;/p&gt;  
+&lt;/div&gt;  
+&lt;div class=&quot;service-card&quot;&gt;  
+  &lt;div class=&quot;service-icon&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2a10 [10 0 0 1 10](tel:10%200%200%201%2010) 10c0 4-2 7-5 9&quot;/&gt;&lt;path d=&quot;M12 2a10 [10 0 0 0-10](tel:10%200%200%200-10) 10c0 4 2 7 5 9&quot;/&gt;&lt;line x1=&quot;12&quot; y1=&quot;12&quot; x2=&quot;12&quot; y2=&quot;22&quot;/&gt;&lt;line x1=&quot;8&quot; y1=&quot;17&quot; x2=&quot;16&quot; y2=&quot;17&quot;/&gt;&lt;/svg&gt;&lt;/div&gt;  
+  &lt;h3&gt;Ceiling Fans&lt;/h3&gt;  
+  &lt;p&gt;Old ceiling fan removed, new one installed in the same location — mounted, wired, and balanced.&lt;/p&gt;  
+&lt;/div&gt;  
+&lt;div class=&quot;service-card&quot;&gt;  
+  &lt;div class=&quot;service-icon&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot;&gt;&lt;rect x=&quot;6&quot; y=&quot;2&quot; width=&quot;12&quot; height=&quot;20&quot; rx=&quot;2&quot;/&gt;&lt;line x1=&quot;12&quot; y1=&quot;18&quot; x2=&quot;12.01&quot; y2=&quot;18&quot;/&gt;&lt;/svg&gt;&lt;/div&gt;  
+  &lt;h3&gt;Outlets &amp;amp; Switches&lt;/h3&gt;  
+  &lt;p&gt;Standard outlets, GFCI outlets, light switches, dimmers, and smart switches swapped out in existing wall boxes.&lt;/p&gt;  
+&lt;/div&gt;  
+&lt;div class=&quot;service-card&quot;&gt;  
+  &lt;div class=&quot;service-icon&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z&quot;/&gt;&lt;polyline points=&quot;9 22 9 12 15 12 15 22&quot;/&gt;&lt;/svg&gt;&lt;/div&gt;  
+  &lt;h3&gt;Bathroom Exhaust Fans&lt;/h3&gt;  
+  &lt;p&gt;Old bathroom fan removed and replaced with your new unit in the same ceiling cutout.&lt;/p&gt;  
+&lt;/div&gt;  
+&lt;div class=&quot;service-card&quot;&gt;  
+  &lt;div class=&quot;service-icon&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot;&gt;&lt;rect x=&quot;3&quot; y=&quot;3&quot; width=&quot;18&quot; height=&quot;18&quot; rx=&quot;2&quot;/&gt;&lt;path d=&quot;M3 9h18&quot;/&gt;&lt;path d=&quot;M9 21V9&quot;/&gt;&lt;/svg&gt;&lt;/div&gt;  
+  &lt;h3&gt;TV &amp;amp; Media Mounting&lt;/h3&gt;  
+  &lt;p&gt;Wall mounting for TVs and displays with clean cable management for a polished, professional look.&lt;/p&gt;  
+&lt;/div&gt;  </code></pre>
+</div>
+</section>
+<section id="why">
+<div class="section-label">
+Why Castille
+</div>
+<h2 class="section-title">
+The Castille Difference
+</h2>
+<p class="section-sub">
+We do one thing and we do it right — clean, professional fixture
+replacements at a price you know upfront.
+</p>
+<div class="why-grid">
+<pre><code>&lt;div class=&quot;why-item&quot;&gt;  
+  &lt;div class=&quot;why-num&quot;&gt;01&lt;/div&gt;  
+  &lt;h3&gt;No Hourly Rate Games&lt;/h3&gt;  
+  &lt;p&gt;Pick a package, know the price. No clock-watching, no surprise invoices when the job is done.&lt;/p&gt;  
+&lt;/div&gt;  
+&lt;div class=&quot;why-item&quot;&gt;  
+  &lt;div class=&quot;why-num&quot;&gt;02&lt;/div&gt;  
+  &lt;h3&gt;Specialized Focus&lt;/h3&gt;  
+  &lt;p&gt;We don&#39;t try to do everything. We specialize in replacement installs — which means we&#39;re fast, precise, and consistent.&lt;/p&gt;  
+&lt;/div&gt;  
+&lt;div class=&quot;why-item&quot;&gt;  
+  &lt;div class=&quot;why-num&quot;&gt;03&lt;/div&gt;  
+  &lt;h3&gt;Clean Work Always&lt;/h3&gt;  
+  &lt;p&gt;We treat your home with respect. Tidy workspace, careful install, and a clean exit when the job is done.&lt;/p&gt;  
+&lt;/div&gt;  
+&lt;div class=&quot;why-item&quot;&gt;  
+  &lt;div class=&quot;why-num&quot;&gt;04&lt;/div&gt;  
+  &lt;h3&gt;We Show Up On Time&lt;/h3&gt;  
+  &lt;p&gt;Book a time and count on us to be there. Reliable scheduling is part of the Castille standard.&lt;/p&gt;  
+&lt;/div&gt;  </code></pre>
+</div>
+</section>
+<section id="contact">
+<div class="section-label">
+Get in Touch
+</div>
+<h2 class="section-title">
+Request a Quote
+</h2>
+<p class="section-sub">
+Have a project outside our packages, or just want to talk it through?
+Send us a message and we’ll get back to you fast.
+</p>
+<div class="contact-wrap">
+<pre><code>&lt;div class=&quot;contact-info&quot;&gt;  
+  &lt;h3&gt;We&#39;d love to hear about your project.&lt;/h3&gt;  
+  &lt;p&gt;Whether you&#39;re upgrading a single fixture or refreshing your whole home, Castille is ready to help. Fill out the form and we&#39;ll follow up with availability and pricing.&lt;/p&gt;  
+  &lt;div class=&quot;contact-detail&quot;&gt;  
+    &lt;div class=&quot;contact-detail-icon&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.93 2 2 0 0 1 3.59 2.74h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.5a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z&quot;/&gt;&lt;/svg&gt;&lt;/div&gt;  
+    &lt;div class=&quot;contact-detail-text&quot;&gt;&lt;strong&gt;Phone&lt;/strong&gt;&lt;span&gt;(985) 860-2363&lt;/span&gt;&lt;/div&gt;  
+  &lt;/div&gt;  
+  &lt;div class=&quot;contact-detail&quot;&gt;  
+    &lt;div class=&quot;contact-detail-icon&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z&quot;/&gt;&lt;polyline points=&quot;22,6 12,13 2,6&quot;/&gt;&lt;/svg&gt;&lt;/div&gt;  
+    &lt;div class=&quot;contact-detail-text&quot;&gt;&lt;strong&gt;Email&lt;/strong&gt;&lt;span&gt;&lt;a href=&quot;/cdn-cgi/l/email-protection&quot; class=&quot;__cf_email__&quot; data-cfemail=&quot;eca18587898f8d9f9885808089ac8f8d9f988580808985829f988d80808d98858382c28f8381&quot;&gt;[email&amp;#160;protected]&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;  
+  &lt;/div&gt;  
+  &lt;div class=&quot;contact-detail&quot;&gt;  
+    &lt;div class=&quot;contact-detail-icon&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z&quot;/&gt;&lt;circle cx=&quot;12&quot; cy=&quot;10&quot; r=&quot;3&quot;/&gt;&lt;/svg&gt;&lt;/div&gt;  
+    &lt;div class=&quot;contact-detail-text&quot;&gt;&lt;strong&gt;Service Area&lt;/strong&gt;&lt;span&gt;Baton Rouge &amp;amp; Surrounding Areas&lt;/span&gt;&lt;/div&gt;  
+  &lt;/div&gt;  
+&lt;/div&gt;  </code></pre>
+<pre><code>&lt;div class=&quot;contact-form&quot;&gt;  
+  &lt;h3&gt;Send Us a Message&lt;/h3&gt;  
+  &lt;div id=&quot;form-fields&quot;&gt;  
+    &lt;div class=&quot;form-row&quot;&gt;  
+      &lt;div class=&quot;form-group&quot;&gt;&lt;label&gt;First Name&lt;/label&gt;&lt;input type=&quot;text&quot; id=&quot;fname&quot; placeholder=&quot;Jane&quot;/&gt;&lt;/div&gt;  
+      &lt;div class=&quot;form-group&quot;&gt;&lt;label&gt;Last Name&lt;/label&gt;&lt;input type=&quot;text&quot; id=&quot;lname&quot; placeholder=&quot;Smith&quot;/&gt;&lt;/div&gt;  
+    &lt;/div&gt;  
+    &lt;div class=&quot;form-group&quot;&gt;&lt;label&gt;Phone Number&lt;/label&gt;&lt;input type=&quot;tel&quot; id=&quot;phone&quot; placeholder=&quot;(555) 000-0000&quot;/&gt;&lt;/div&gt;  
+    &lt;div class=&quot;form-group&quot;&gt;&lt;label&gt;Email Address&lt;/label&gt;&lt;input type=&quot;email&quot; id=&quot;email&quot; placeholder=&quot;[jane@email.com](mailto:jane@email.com)&quot;/&gt;&lt;/div&gt;  
+    &lt;div class=&quot;form-group&quot;&gt;  
+      &lt;label&gt;Service Interest&lt;/label&gt;  
+      &lt;select id=&quot;service&quot;&gt;  
+        &lt;option value=&quot;&quot;&gt;Select an option...&lt;/option&gt;  
+        &lt;option&gt;Basic Fix — $179&lt;/option&gt;  
+        &lt;option&gt;Lighting Refresh — $379&lt;/option&gt;  
+        &lt;option&gt;Whole Home Upgrade — $649&lt;/option&gt;  
+        &lt;option&gt;Custom / Not Sure Yet&lt;/option&gt;  
+      &lt;/select&gt;  
+    &lt;/div&gt;  
+    &lt;div class=&quot;form-group&quot;&gt;&lt;label&gt;Project Details&lt;/label&gt;&lt;textarea id=&quot;details&quot; placeholder=&quot;Tell us what fixtures or devices you need replaced and where you&#39;re located...&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;  
+    &lt;button class=&quot;form-submit&quot; onclick=&quot;submitForm()&quot;&gt;Send Message →&lt;/button&gt;  
+  &lt;/div&gt;  
+  &lt;div class=&quot;form-success&quot; id=&quot;form-success&quot;&gt;  
+    &lt;div class=&quot;check&quot;&gt;&lt;svg viewBox=&quot;0 0 24 24&quot;&gt;&lt;polyline points=&quot;20 6 9 17 4 12&quot;/&gt;&lt;/svg&gt;&lt;/div&gt;  
+    &lt;h4&gt;Message Received!&lt;/h4&gt;  
+    &lt;p&gt;Thanks for reaching out. We&#39;ll get back to you shortly to confirm your project and schedule.&lt;/p&gt;  
+  &lt;/div&gt;  
+&lt;/div&gt;  </code></pre>
+</div>
+</section>
+<footer>
+<p>
+© 2026 <span>Castille Installation Services</span> — Baton Rouge &amp;
+Surrounding Areas | Flat-Rate Fixture &amp; Device Replacement
+</p>
+</footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script>
+<p>function submitForm() {<br />
+const fname = document.getElementById(‘fname’).value.trim();<br />
+const email = document.getElementById(‘email’).value.trim();<br />
+const service = document.getElementById(‘service’).value;<br />
+if (!fname || !email || !service) { alert(‘Please fill in your name,
+email, and service interest.’); return; }<br />
+document.getElementById(‘form-fields’).style.display = ‘none’;<br />
+document.getElementById(‘form-success’).style.display = ‘block’;<br />
+}<br />
+const observer = new IntersectionObserver((entries) =&gt; {<br />
+entries.forEach(e =&gt; { if (e.isIntersecting) { e.target.style.opacity
+= ‘1’; e.target.style.transform = ‘translateY(0)’; } });<br />
+}, { threshold: 0.1 });<br />
+document.querySelectorAll(’.service-car</p>
