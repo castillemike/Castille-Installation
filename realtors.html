@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Castille Installation | Electrical for Realtors — Baton Rouge</title>
+  <meta name="description" content="Fast, flat-rate electrical work for realtors in Baton Rouge. Inspection repair lists, listing upgrades, outlet replacements, fixtures, and ceiling fans. Trusted by agents across the area." />
+  <link rel="canonical" href="https://castilleinstallation.com/realtors" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HMMPR1FPRD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HMMPR1FPRD');
+  </script>
+<style>
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  :root { --navy:#0f1f38; --gold:#c9a84c; --gold-light:#e2c47a; --cream:#f8f5f0; --white:#fff; --gray:#6b7280; --border:#e0dbd2; --success:#0f6b46; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--navy); line-height:1.6; }
+
+  /* ── Nav ── */
+  nav { position:fixed; top:0; width:100%; z-index:100; background:rgba(15,31,56,.97); backdrop-filter:blur(8px); padding:0 5%; display:flex; align-items:center; justify-content:space-between; height:70px; border-bottom:1px solid rgba(201,168,76,.2); }
+  .nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+  .nav-logo-icon { width:36px; height:36px; background:var(--gold); border-radius:6px; display:flex; align-items:center; justify-content:center; }
+  .nav-logo-icon svg { width:20px; height:20px; fill:var(--navy); }
+  .nav-brand { font-family:'Playfair Display',serif; font-size:1.02rem; color:var(--white); letter-spacing:.02em; }
+  .nav-links { display:flex; gap:2rem; list-style:none; align-items:center; }
+  .nav-links a { color:rgba(255,255,255,.75); text-decoration:none; font-size:.875rem; letter-spacing:.04em; transition:color .2s; }
+  .nav-links a:hover { color:var(--gold); }
+  .nav-cta { background:var(--gold)!important; color:var(--navy)!important; padding:.5rem 1.25rem!important; border-radius:4px; font-weight:500!important; }
+  .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; background:none; border:none; }
+  .hamburger span { display:block; width:22px; height:2px; background:var(--white); border-radius:2px; transition:all .25s; }
+  .hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity:0; }
+  .hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+  .mobile-menu { display:none; position:fixed; top:70px; left:0; right:0; background:rgba(15,31,56,.98); border-bottom:1px solid rgba(201,168,76,.2); z-index:99; padding:1rem 5%; flex-direction:column; gap:.25rem; }
+  .mobile-menu.open { display:flex; }
+  .mobile-menu a { color:rgba(255,255,255,.8); text-decoration:none; font-size:1rem; padding:.75rem 0; border-bottom:1px solid rgba(255,255,255,.07); }
+  .mobile-menu a:last-child { border-bottom:none; color:var(--gold); font-weight:500; }
+
+  /* ── Buttons ── */
+  .btn-primary, .btn-secondary { padding:.875rem 2rem; border-radius:5px; text-decoration:none; font-size:.95rem; display:inline-flex; align-items:center; justify-content:center; gap:8px; transition:background .2s, color .2s, transform .2s; cursor:pointer; border:none; }
+  .btn-primary { background:var(--gold); color:var(--navy); font-weight:600; }
+  .btn-primary:hover { background:var(--gold-light); transform:translateY(-1px); }
+  .btn-secondary { background:transparent; color:rgba(255,255,255,.82); border:1px solid rgba(255,255,255,.25); }
+  .btn-secondary:hover { border-color:var(--gold); color:var(--gold); }
+
+  /* ── Hero ── */
+  .hero { min-height:100vh; background:var(--navy); display:flex; align-items:center; padding:70px 5% 0; position:relative; overflow:hidden; }
+  .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 70% 50%, rgba(201,168,76,.07) 0%, transparent 65%); }
+  .hero-grid { position:absolute; inset:0; background-image:linear-gradient(rgba(201,168,76,.04) 1px, transparent 1px),linear-gradient(90deg, rgba(201,168,76,.04) 1px, transparent 1px); background-size:60px 60px; }
+  .hero-content { position:relative; z-index:1; max-width:720px; }
+  .hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(201,168,76,.12); border:1px solid rgba(201,168,76,.3); color:var(--gold); padding:.35rem .9rem; border-radius:20px; font-size:.8rem; font-weight:500; letter-spacing:.06em; text-transform:uppercase; margin-bottom:1.5rem; }
+  .hero-badge::before { content:''; width:6px; height:6px; background:var(--gold); border-radius:50%; }
+  .hero h1 { font-family:'Playfair Display',serif; font-size:clamp(2.2rem,5vw,3.6rem); color:var(--white); line-height:1.1; margin-bottom:1rem; }
+  .hero h1 span { color:var(--gold); }
+  .hero-sub { font-size:1.05rem; color:rgba(255,255,255,.72); max-width:600px; margin-bottom:1rem; font-weight:300; }
+  .hero-cred { font-size:.82rem; color:rgba(201,168,76,.7); letter-spacing:.04em; margin-bottom:2rem; }
+  .hero-actions { display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:3rem; }
+
+  /* ── Review hero quote ── */
+  .hero-quote { border-left:3px solid var(--gold); padding:.75rem 1.25rem; margin-top:2.5rem; max-width:580px; }
+  .hero-quote p { font-size:.95rem; color:rgba(255,255,255,.75); font-style:italic; font-weight:300; margin-bottom:.4rem; }
+  .hero-quote cite { font-size:.8rem; color:var(--gold-light); font-style:normal; }
+
+  /* ── Sections ── */
+  section { padding:5rem 5%; }
+  .section-label { display:inline-flex; align-items:center; gap:8px; font-size:.75rem; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); margin-bottom:.75rem; }
+  .section-label::before { content:''; width:24px; height:2px; background:var(--gold); }
+  .section-title { font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3vw,2.4rem); color:var(--navy); line-height:1.2; margin-bottom:1rem; }
+  .section-sub { font-size:1rem; color:var(--gray); max-width:680px; font-weight:300; }
+
+  /* ── Pain points ── */
+  #pain { background:var(--white); }
+  .pain-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.25rem; margin-top:2.5rem; }
+  .pain-card { background:var(--cream); border:1px solid var(--border); border-radius:8px; padding:1.5rem; border-top:3px solid var(--gold); }
+  .pain-card h3 { font-family:'Playfair Display',serif; font-size:1rem; color:var(--navy); margin-bottom:.4rem; }
+  .pain-card p { font-size:.83rem; color:var(--gray); font-weight:300; line-height:1.6; }
+
+  /* ── Why section (navy) ── */
+  #why { background:var(--navy); }
+  #why .section-title { color:var(--white); }
+  #why .section-sub { color:rgba(255,255,255,.5); }
+  .why-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1.25rem; margin-top:2.5rem; }
+  .why-card { padding:1.5rem; border:1px solid rgba(201,168,76,.15); border-radius:8px; background:rgba(255,255,255,.03); }
+  .why-card h3 { font-size:.95rem; font-weight:500; color:var(--white); margin-bottom:.35rem; }
+  .why-card p { font-size:.82rem; color:rgba(255,255,255,.45); font-weight:300; line-height:1.6; }
+  .why-icon { width:36px; height:36px; background:rgba(201,168,76,.1); border-radius:7px; display:flex; align-items:center; justify-content:center; margin-bottom:.75rem; }
+
+  /* ── Pricing ── */
+  #pricing { background:var(--cream); }
+  .pricing-table { width:100%; border-collapse:collapse; margin-top:2rem; background:var(--white); border-radius:10px; overflow:hidden; border:1px solid var(--border); }
+  .pricing-table th { background:var(--navy); color:var(--white); padding:.85rem 1.25rem; text-align:left; font-size:.8rem; font-weight:500; letter-spacing:.06em; text-transform:uppercase; }
+  .pricing-table th:last-child { text-align:right; color:var(--gold); }
+  .pricing-table td { padding:.85rem 1.25rem; border-bottom:1px solid var(--border); font-size:.92rem; color:var(--navy); }
+  .pricing-table tr:last-child td { border-bottom:none; }
+  .pricing-table td:last-child { text-align:right; font-weight:600; color:var(--gold); font-family:'Playfair Display',serif; }
+  .pricing-table tr:hover td { background:rgba(201,168,76,.04); }
+  .pricing-note { margin-top:1rem; font-size:.82rem; color:var(--gray); font-style:italic; }
+  .pricing-range { margin-top:1.25rem; display:inline-flex; align-items:center; gap:.6rem; background:var(--navy); color:var(--gold-light); padding:.6rem 1.25rem; border-radius:6px; font-size:.88rem; font-weight:500; }
+
+  /* ── Gallery ── */
+  #gallery { background:var(--white); }
+  .gallery-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:2rem; margin-top:2.5rem; }
+  .gallery-pair { border-radius:10px; overflow:hidden; border:1px solid var(--border); box-shadow:0 2px 12px rgba(15,31,56,.07); }
+  .gallery-pair-images { display:grid; grid-template-columns:1fr 1fr; }
+  .gallery-img-wrap { position:relative; overflow:hidden; aspect-ratio:1/1; background:var(--navy); }
+  .gallery-img-wrap img { width:100%; height:100%; object-fit:cover; display:block; }
+  .gallery-img-label { position:absolute; bottom:0; left:0; right:0; padding:.35rem .6rem; font-size:.7rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; }
+  .gallery-img-label.before { background:rgba(15,31,56,.75); color:rgba(255,255,255,.8); }
+  .gallery-img-label.after { background:rgba(201,168,76,.85); color:var(--navy); }
+  .gallery-caption { padding:1rem 1.25rem; background:var(--white); }
+  .gallery-caption h4 { font-family:'Playfair Display',serif; font-size:.95rem; color:var(--navy); margin-bottom:.2rem; }
+  .gallery-caption p { font-size:.8rem; color:var(--gray); font-weight:300; }
+
+  /* ── Contact ── */
+  #contact { background:var(--navy); }
+  #contact .section-title { color:var(--white); }
+  #contact .section-sub { color:rgba(255,255,255,.5); }
+  .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:3rem; margin-top:2.5rem; align-items:start; }
+  .contact-info { color:var(--white); }
+  .contact-info h3 { font-family:'Playfair Display',serif; font-size:1.2rem; color:var(--white); margin-bottom:1rem; }
+  .contact-detail { display:flex; align-items:center; gap:.75rem; margin-bottom:.85rem; font-size:.95rem; color:rgba(255,255,255,.75); }
+  .contact-detail a { color:var(--gold-light); text-decoration:none; }
+  .contact-detail a:hover { color:var(--gold); }
+  .contact-dot { width:6px; height:6px; background:var(--gold); border-radius:50%; flex-shrink:0; }
+  .contact-form-wrap { background:rgba(255,255,255,.04); border:1px solid rgba(201,168,76,.2); border-radius:10px; padding:2rem; }
+  .contact-form-wrap h3 { font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--white); margin-bottom:.4rem; }
+  .contact-form-wrap p { font-size:.85rem; color:rgba(255,255,255,.45); margin-bottom:1.25rem; }
+  .form-group { margin-bottom:1rem; }
+  label { display:block; font-size:.72rem; font-weight:600; color:rgba(255,255,255,.5); letter-spacing:.06em; text-transform:uppercase; margin-bottom:.4rem; }
+  input, select, textarea { width:100%; padding:.75rem .9rem; border:1px solid rgba(255,255,255,.12); border-radius:5px; font-family:'DM Sans',sans-serif; font-size:.92rem; color:var(--white); background:rgba(255,255,255,.06); outline:none; transition:border-color .2s; }
+  input:focus, select:focus, textarea:focus { border-color:var(--gold); }
+  input::placeholder, textarea::placeholder { color:rgba(255,255,255,.3); }
+  select option { background:var(--navy); color:var(--white); }
+  textarea { resize:vertical; min-height:80px; }
+  .success-box { display:none; border:1px solid rgba(15,107,70,.3); background:rgba(15,107,70,.1); color:#4ade80; padding:1rem; border-radius:8px; margin-top:1rem; font-size:.9rem; }
+
+  /* ── Footer ── */
+  footer { background:var(--navy); color:rgba(255,255,255,.35); text-align:center; padding:1.5rem 5%; font-size:.8rem; border-top:1px solid rgba(201,168,76,.1); }
+  footer a { color:var(--gold); text-decoration:none; }
+  footer span { color:rgba(201,168,76,.6); }
+
+  /* ── Responsive ── */
+  @media(max-width:768px) {
+    .nav-links { display:none; }
+    .hamburger { display:flex; }
+    .contact-grid { grid-template-columns:1fr; }
+    .gallery-grid { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <div class="nav-logo-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+    <span class="nav-brand">Castille <span style="font-weight:300;color:var(--gold-light);">Installation Services</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#pain">What We Solve</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#gallery">Our Work</a></li>
+    <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#pain" class="mobile-link">What We Solve</a>
+  <a href="#pricing" class="mobile-link">Pricing</a>
+  <a href="#gallery" class="mobile-link">Our Work</a>
+  <a href="#contact" class="mobile-link">Get in Touch</a>
+</div>
+
+<!-- ── Hero ── -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">For Realtors &amp; Property Managers — Baton Rouge Area</div>
+    <h1>Inspection Repair List?<br><span>We'll Clear It Before Closing.</span></h1>
+    <p class="hero-sub">Flat-rate electrical replacement work built around your listing timeline — fixtures, fans, outlets, exhaust fans, and inspection repairs. One visit, clean work, no callbacks.</p>
+    <p class="hero-cred">Licensed &amp; Insured &nbsp;·&nbsp; 10+ Years Professional Electrical Experience</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Reach Out Today</a>
+      <a href="#pricing" class="btn-secondary">View Pricing</a>
+    </div>
+    <p style="font-size:.88rem;color:rgba(255,255,255,.5);margin-bottom:1.5rem;">
+      Or call / text directly: <a href="tel:9858602363" style="color:#c9a84c;font-weight:500;">985-860-2363</a>
+    </p>
+
+    <div class="hero-quote">
+      <p>"I've used Castille for years, both for my personal homes and as a trusted referral for my real estate clients. Having someone I can confidently recommend to my clients is invaluable."</p>
+      <cite>— Ellie Burk Glennon, Realtor · Burk Brokerage Real Estate ★★★★★</cite>
+    </div>
+  </div>
+</section>
+
+<!-- ── What We Solve ── -->
+<section id="pain">
+  <div class="section-label">What We Solve</div>
+  <h2 class="section-title">The Electrical Issues That Hold Up Closings</h2>
+  <p class="section-sub">These are the most common electrical items we handle for agents and property managers — fast, clean, and at a predictable price.</p>
+  <div class="pain-grid">
+    <div class="pain-card">
+      <h3>Inspection Requirements</h3>
+      <p>Need an electrician to evaluate items called out by an inspector, or ready to repair them? We handle both — and if you move forward with repairs on the same visit, the evaluation cost rolls right into the invoice.</p>
+    </div>
+    <div class="pain-card">
+      <h3>Pre-Listing Upgrades</h3>
+      <p>Updated fixtures, modern outlets, and ceiling fans make a listing show better and photograph cleaner — before it hits the market.</p>
+    </div>
+    <div class="pain-card">
+      <h3>Outlet &amp; Switch Replacements</h3>
+      <p>Discolored, outdated, or non-functional outlets and switches replaced in existing locations. USB upgrades available.</p>
+    </div>
+    <div class="pain-card">
+      <h3>Fixture &amp; Fan Installs</h3>
+      <p>Customer-supplied light fixtures and ceiling fans swapped out cleanly in existing mounting locations.</p>
+    </div>
+    <div class="pain-card">
+      <h3>Exhaust Fan Replacement</h3>
+      <p>Bathroom exhaust fans and combo units replaced in existing openings — a common inspection item, handled in one visit.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Why Castille ── -->
+<section id="why">
+  <div class="section-label">Why Agents Work With Us</div>
+  <h2 class="section-title" style="color:var(--white);">Built Around Your Timeline</h2>
+  <p class="section-sub">We understand that listing deadlines, inspection windows, and closing dates don't move. Here's what that means in practice.</p>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <h3>48–72 Hr Scheduling</h3>
+      <p>Most jobs scheduled within 48–72 hours. We work around showings, open houses, and closing timelines.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <h3>Inspection Lists Cleared</h3>
+      <p>We're familiar with the electrical items that show up on inspection reports and handle them efficiently in one visit.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+      <h3>Flat-Rate Pricing</h3>
+      <p>No surprises for you or your clients. Prices are clear upfront so you can quote confidently before booking.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <h3>Reliable &amp; On Time</h3>
+      <p>We show up when we say we will, do clean work, and leave the property the way we found it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Pricing ── -->
+<section id="pricing">
+  <div class="section-label">Pricing Reference</div>
+  <h2 class="section-title">Flat-Rate Replacement Pricing</h2>
+  <p class="section-sub">Straightforward pricing for the most common realtor and property manager requests. Work beyond this scope — panel repairs, new wiring, complex diagnostics — is quoted on-site.</p>
+
+  <table class="pricing-table">
+    <thead>
+      <tr><th>Service</th><th style="text-align:right;color:var(--gold);">Rate</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Light Fixture Installation</td><td>$125</td></tr>
+      <tr><td>Ceiling Fan Installation</td><td>$185</td></tr>
+      <tr><td>Outlet or Switch Replacement</td><td>$75 first &nbsp;/&nbsp; $55 ea. add'l</td></tr>
+      <tr><td>Bathroom Exhaust Fan or Combo Unit</td><td>$225</td></tr>
+      <tr><td>Smoke Detectors</td><td>$95</td></tr>
+      <tr><td>Inspection Evaluation Visit</td><td>$125 <span style="font-size:.78rem;font-weight:400;color:var(--gray);">*</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="pricing-range">Most jobs: $175 – $450</div>
+
+  <p class="pricing-note">* Evaluation fee applied toward same-visit repair work. Customer supplies fixture or device. Standard items available upon request with advance notice. Minimum per visit: $125.</p>
+</section>
+
+<!-- ── Gallery ── -->
+<section id="gallery">
+  <div class="section-label">Our Work</div>
+  <h2 class="section-title">Before &amp; After</h2>
+  <p class="section-sub">Real jobs from the Baton Rouge area — the kind of work that makes a listing show better.</p>
+  <div class="gallery-grid">
+    <div class="gallery-pair">
+      <div class="gallery-pair-images">
+        <div class="gallery-img-wrap">
+          <img src="Images/outlet-before.jpg" alt="Older discolored outlet before replacement" loading="lazy" onerror="this.closest('.gallery-img-wrap').style.background='#1a3358'"/>
+          <div class="gallery-img-label before">Before</div>
+        </div>
+        <div class="gallery-img-wrap">
+          <img src="Images/outlet-after.jpg" alt="Modern USB outlet after replacement" loading="lazy" onerror="this.closest('.gallery-img-wrap').style.background='#0f1f38'"/>
+          <div class="gallery-img-label after">After</div>
+        </div>
+      </div>
+      <div class="gallery-caption">
+        <h4>Outlet Upgrade</h4>
+        <p>Discolored standard outlet replaced with a modern USB combo outlet.</p>
+      </div>
+    </div>
+    <div class="gallery-pair">
+      <div class="gallery-pair-images">
+        <div class="gallery-img-wrap">
+          <img src="Images/lighting-before.jpeg" alt="Dated recessed lights before replacement" loading="lazy" onerror="this.closest('.gallery-img-wrap').style.background='#1a3358'"/>
+          <div class="gallery-img-label before">Before</div>
+        </div>
+        <div class="gallery-img-wrap">
+          <img src="Images/lighting-after.jpeg" alt="Bright LED puck lights after replacement" loading="lazy" onerror="this.closest('.gallery-img-wrap').style.background='#0f1f38'"/>
+          <div class="gallery-img-label after">After</div>
+        </div>
+      </div>
+      <div class="gallery-caption">
+        <h4>Recessed Lighting Upgrade</h4>
+        <p>Dated bulb-based cans replaced with LED pucks — brighter, lower power, adjustable color temperature.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact ── -->
+<section id="contact">
+  <div class="section-label">Get In Touch</div>
+  <h2 class="section-title" style="color:var(--white);">Ready to Work Together?</h2>
+  <p class="section-sub">Send a quick message or reach out directly. Most jobs are scheduled within 48–72 hours.</p>
+
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>Michael Castille</h3>
+      <div class="contact-detail"><span class="contact-dot"></span><a href="tel:9858602363">985-860-2363</a>&nbsp; — Call or Text</div>
+      <div class="contact-detail"><span class="contact-dot"></span><a href="/cdn-cgi/l/email-protection#dcb1b5b7b99cbfbdafa8b5b0b0b9b5b2afa8bdb0b0bda8b5b3b2f2bfb3b1"><span class="__cf_email__" data-cfemail="e5888c8e80a5868496918c8989808c8b969184898984918c8a8bcb868a88">[email&#160;protected]</span></a></div>
+      <div class="contact-detail"><span class="contact-dot"></span><a href="https://castilleinstallation.com" target="_blank">castilleinstallation.com</a></div>
+      <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,.1);">
+        <p style="font-size:.82rem; color:rgba(255,255,255,.35); text-transform:uppercase; letter-spacing:.08em; margin-bottom:.6rem;">Service Area</p>
+        <p style="font-size:.88rem; color:rgba(255,255,255,.5);">Baton Rouge · Prairieville · Denham Springs · Central · Gonzales and surrounding areas</p>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap">
+      <h3>Send a Message</h3>
+      <p>Briefly describe what you need and I'll follow up promptly.</p>
+      <form id="realtor-form" action="https://formspree.io/f/mbdzaggr" method="POST">
+        <input type="hidden" name="_subject" value="Realtor inquiry from castilleinstallation.com/realtors">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="source" value="realtors landing page">
+        <div class="form-group">
+          <label for="r-name">Your Name</label>
+          <input id="r-name" name="name" type="text" placeholder="First and last name" required />
+        </div>
+        <div class="form-group">
+          <label for="r-phone">Phone</label>
+          <input id="r-phone" name="phone" type="tel" placeholder="Best number to reach you" required />
+        </div>
+        <div class="form-group">
+          <label for="r-email">Email</label>
+          <input id="r-email" name="email" type="email" placeholder="Your email address" required />
+        </div>
+        <div class="form-group">
+          <label for="r-type">I am a...</label>
+          <select id="r-type" name="contact_type">
+            <option value="">Select one...</option>
+            <option value="Listing Agent">Listing Agent</option>
+            <option value="Buyer's Agent">Buyer's Agent</option>
+            <option value="Property Manager">Property Manager</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="r-message">What do you need?</label>
+          <textarea id="r-message" name="message" placeholder="e.g. inspection repair list, pre-listing upgrades, unit turn work..." required></textarea>
+        </div>
+        <button type="submit" id="r-submit" class="btn-primary" style="width:100%;">Send Message</button>
+        <div id="r-success" class="success-box">Thanks — I'll be in touch shortly.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 <span>Castille Installation</span> &nbsp;·&nbsp; <a href="/">Back to main site</a></p>
+  <p style="margin-top:.4rem;">Baton Rouge &amp; Surrounding Areas &nbsp;·&nbsp; Flat-Rate Electrical Replacement Installs</p>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    });
+  });
+
+  // Contact form
+  const realtorForm = document.getElementById('realtor-form');
+  const rSubmit = document.getElementById('r-submit');
+  const rSuccess = document.getElementById('r-success');
+  realtorForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    rSubmit.textContent = 'Sending...';
+    rSubmit.disabled = true;
+    try {
+      const res = await fetch(realtorForm.action, {
+        method: 'POST',
+        body: new FormData(realtorForm),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        realtorForm.reset();
+        rSuccess.style.display = 'block';
+      } else {
+        alert('Something went wrong. Please try again or call/text directly.');
+        rSubmit.textContent = 'Send 
